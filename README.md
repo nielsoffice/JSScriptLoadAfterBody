@@ -65,7 +65,10 @@ Load JS script on documents after body tag HTML
     const docID     = document.body.id = 'app-id';
     const childElem = document.getElementById('app-id');
     const appData   = document.querySelectorAll('#app-data');
-        
+   
+    // const scriptTag = document.querySelectorAll('script'); 
+    // scriptTag.forEach((__cv, __in) => { childElem.insertAdjacentElement('afterend', __cv ); });
+   
     appData.forEach((__cv, __in) => {
        childElem.insertAdjacentElement('afterend', __cv );
     });
@@ -76,7 +79,7 @@ Load JS script on documents after body tag HTML
  </html>
 ```
 
-```JS
+```HTML
 // Result 
 <html>
 <head></head>
@@ -94,6 +97,9 @@ Load JS script on documents after body tag HTML
    const docID     = document.body.id = 'app-id';
    const childElem = document.getElementById('app-id');
    const appData   = document.querySelectorAll('#app-data');
+   
+    // const scriptTag = document.querySelectorAll('script'); 
+    // scriptTag.forEach((__cv, __in) => { childElem.insertAdjacentElement('afterend', __cv ); });
         
    appData.forEach((__cv, __in) => {
      childElem.insertAdjacentElement('afterend', __cv );
