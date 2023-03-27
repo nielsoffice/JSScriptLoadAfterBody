@@ -47,6 +47,73 @@ Load JS script on documents after body tag HTML
 ```
 
 ```HTML
+<!-- demo 2 loop select all -->
+<html>
+  <head></head>
+  <body id="app-id">
+  
+  <div id="parentTag" class="try">
+   <p>Demo Content...</p>
+  </div>
+  
+  <script id="app-data">/*JS@2*/</script>
+  <script id="app-data">/*JS@3*/</script>
+  <script id="app-data">/*JS@4*/</script>
+
+  <script id="app-data">
+       
+    const docID     = document.body.id = 'app-id';
+    const childElem = document.getElementById('app-id');
+    const appData   = document.querySelectorAll('#app-data');
+        
+    appData.forEach((__cv, __in) => {
+  
+       console.log(__cv.id);
+       childElem.insertAdjacentElement('afterend', __cv );
+
+    });
+    
+  </script>
+  
+ </body>
+ </html>
+```
+
+```JS
+// Result 
+<html>
+<head></head>
+  
+  <body id="app-id">
+  
+  <div id="parentTag" class="try">
+   <p>Demo Content...</p>
+  </div>
+ 
+ </body>
+  
+<script id="app-data">
+       
+   const docID     = document.body.id = 'app-id';
+   const childElem = document.getElementById('app-id');
+   const appData   = document.querySelectorAll('#app-data');
+        
+   appData.forEach((__cv, __in) => {
+  
+   console.log(__cv.id);
+   childElem.insertAdjacentElement('afterend', __cv );
+
+ });
+    
+</script>
+<script id="app-data">/*JS@4*/</script>
+<script id="app-data">/*JS@3*/</script>
+<script id="app-data">/*JS@2*/</script>
+  
+</html>
+```
+
+```HTML
  <!-- Snippet -->
  <script id="app-data">
 
