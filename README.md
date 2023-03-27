@@ -67,10 +67,7 @@ Load JS script on documents after body tag HTML
     const appData   = document.querySelectorAll('#app-data');
         
     appData.forEach((__cv, __in) => {
-  
-       console.log(__cv.id);
        childElem.insertAdjacentElement('afterend', __cv );
-
     });
     
   </script>
@@ -99,11 +96,8 @@ Load JS script on documents after body tag HTML
    const appData   = document.querySelectorAll('#app-data');
         
    appData.forEach((__cv, __in) => {
-  
-   console.log(__cv.id);
-   childElem.insertAdjacentElement('afterend', __cv );
-
- });
+     childElem.insertAdjacentElement('afterend', __cv );
+   });
     
 </script>
 <script id="app-data">/*JS@4*/</script>
